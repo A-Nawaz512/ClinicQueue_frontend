@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 export const patientApi = createApi({
   reducerPath: 'patientApi',
   baseQuery: fetchBaseQuery({
-    baseUrl: import.meta.env.VITE_API_URL || 'http://localhost:5000',
+    baseUrl: import.meta.env.VITE_API_URL || 'https://clinicqueue-backend.onrender.com/',
     prepareHeaders: (headers) => {
       headers.set('Content-Type', 'application/json');
       return headers;
