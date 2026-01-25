@@ -101,16 +101,15 @@ const Queue = () => {
       </div>
 
       {/* ---------------- Filters ---------------- */}
-      <div className="flex flex-wrap gap-1">
+      <div className="flex flex-wrap gap-1 md:gap-2">
         {["All", "Urgent", "Waiting", "In Room", "Completed"].map((f) => (
           <button
             key={f}
             onClick={() => setFilter(f)}
-            className={`px-2 md:px-3 py-1.5 md:py-2 rounded-md font-medium text-sm transition
-              ${
-                filter === f
-                  ? "bg-blue-600 text-white"
-                  : "bg-white border border-gray-200 text-gray-700 hover:bg-gray-100"
+            className={`px-2 md:px-4 py-2 md:py-2.5 rounded-md font-medium text-sm transition min-h-[44px] flex items-center justify-center
+              ${filter === f
+                ? "bg-blue-600 text-white"
+                : "bg-white border border-gray-200 text-gray-700 hover:bg-gray-100"
               }`}
           >
             {f}
@@ -148,9 +147,8 @@ const StatCard = ({ label, value, color = "gray" }) => (
   <div className="bg-white border border-gray-200 rounded-xl p-3 md:p-4 text-center shadow-sm hover:shadow-md transition">
     <p className="text-xs md:text-sm text-gray-500">{label}</p>
     <p
-      className={`text-lg md:text-2xl font-bold mt-1 ${
-        color !== "gray" ? `text-${color}-600` : "text-gray-800"
-      }`}
+      className={`text-lg md:text-2xl font-bold mt-1 ${color !== "gray" ? `text-${color}-600` : "text-gray-800"
+        }`}
     >
       {value}
     </p>

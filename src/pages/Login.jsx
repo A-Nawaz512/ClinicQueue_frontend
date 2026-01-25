@@ -9,7 +9,7 @@ const Login = () => {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    if (username === "admin" && password === "password123") {
+    if (username === "admin" && password === "useradmin") {
       localStorage.setItem("user", username);
       toast.success("Login successful!");
       navigate("/"); // redirect to dashboard
@@ -19,9 +19,9 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-auto px-4 pt-6 md:pt-10 bg-neutral-100 flex justify-center">
+    <div className="min-h-screen px-4 py-6 md:py-10 bg-neutral-100 flex items-center justify-center">
       <div className="w-full max-w-md bg-white rounded-xl border border-gray-200 shadow-lg overflow-hidden">
-        
+
         {/* HEADER */}
         <div className="bg-black text-center py-5 px-6">
           <h2 className="text-xl md:text-2xl font-semibold tracking-wide text-blue-100">
@@ -36,7 +36,7 @@ const Login = () => {
         {/* FORM */}
         <div className="p-4 md:p-6">
           <form className="space-y-4" onSubmit={handleLogin}>
-            
+
             {/* Username */}
             <div>
               <label className="block text-gray-700 font-medium mb-1 text-sm md:text-base">

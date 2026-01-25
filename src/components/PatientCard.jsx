@@ -63,8 +63,8 @@ const PatientCard = ({ patient, onCall, onComplete }) => {
         {/* Patient Info */}
         <div className="flex-1 min-w-0">
           <div className="flex flex-col sm:flex-row sm:items-center sm:gap-3 gap-1 mb-2 min-w-0">
-            <h3 className="text-lg font-semibold text-gray-900 truncate">{patient.name}</h3>
-            <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold border flex-shrink-0
+            <h3 className="text-lg font-semibold text-gray-900 truncate max-w-full">{patient.name}</h3>
+            <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold border flex-shrink-0 w-fit
               ${appointmentColors[patient.appointment_type] || "bg-gray-100 text-gray-800 border-gray-200"}`}>
               {patient.appointment_type}
             </span>
@@ -96,11 +96,11 @@ const PatientCard = ({ patient, onCall, onComplete }) => {
 
         {/* Action Buttons */}
         {!isCompleted && (
-          <div className="flex flex-wrap sm:flex-col lg:flex-row gap-2 mt-3 sm:mt-0 min-w-max">
+          <div className="flex flex-col xs:flex-row sm:flex-col lg:flex-row gap-2 mt-3 sm:mt-0 w-full sm:w-auto">
             {patient.status === "waiting" && (
               <button
                 onClick={() => onCall(patient.id)}
-                className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-semibold transition-colors text-sm sm:text-base"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2.5 rounded-lg font-semibold transition-colors text-sm sm:text-base min-h-[44px] w-full sm:w-auto"
               >
                 Call to Room
               </button>
@@ -108,7 +108,7 @@ const PatientCard = ({ patient, onCall, onComplete }) => {
 
             <button
               onClick={() => onComplete(patient.id)}
-              className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg font-semibold transition-colors text-sm sm:text-base"
+              className="bg-green-600 hover:bg-green-700 text-white px-4 py-2.5 rounded-lg font-semibold transition-colors text-sm sm:text-base min-h-[44px] w-full sm:w-auto"
             >
               Complete Visit
             </button>

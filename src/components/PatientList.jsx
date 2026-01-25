@@ -74,11 +74,11 @@ const PatientList = () => {
   };
 
   return (
-    <div className="flex-1 p-6 bg-neutral-100">
+    <div className="flex-1 p-4 md:p-6 bg-neutral-100">
       {/* Header */}
-      <div className="mb-6 flex justify-between items-center">
-        <h2 className="text-2xl font-semibold text-gray-800">{titleMap[filter] || "Patients"}</h2>
-        <p className="text-gray-600">
+      <div className="mb-4 md:mb-6 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2">
+        <h2 className="text-xl md:text-2xl font-semibold text-gray-800">{titleMap[filter] || "Patients"}</h2>
+        <p className="text-sm md:text-base text-gray-600">
           {filteredPatients.length} patient{filteredPatients.length !== 1 && "s"}
         </p>
       </div>

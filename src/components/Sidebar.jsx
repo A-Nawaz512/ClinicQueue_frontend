@@ -43,7 +43,7 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
         </div>
 
         {/* Nav items */}
-        <nav className="flex-1 px-3 py-6 space-y-6 text-sm">
+        <nav className="flex-1 px-3 py-6 space-y-6 text-sm overflow-y-auto pb-safe">
           <Section title="Main">
             <NavItem
               to="/dashboard"
