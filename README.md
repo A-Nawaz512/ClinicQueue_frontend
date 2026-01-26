@@ -87,6 +87,6 @@ Multi-clinic support
 
 🔗 Links
 
-Live Demo: [Add link if available]
+Live Demo: https://clinic-queue-frontend.vercel.app/
 
-GitHub Repository: [Your repo link]
+GitHub Repository: https://github.com/A-Nawaz512/ClinicQueue_frontend
