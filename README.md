@@ -1,16 +1,92 @@
-# React + Vite
+🏥 Clinic Queue Management System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A real-world clinic queue management system designed to improve patient flow, reduce waiting confusion, and help clinic staff manage visits efficiently through a clean dashboard.
 
-Currently, two official plugins are available:
+🚨 Problem Statement
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+In many clinics, patient queues are handled manually or verbally, leading to:
 
-## React Compiler
+Unclear waiting times
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Poor patient experience
 
-## Expanding the ESLint configuration
+Inefficient staff coordination
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+No visibility into queue status
+
+💡 Solution
+
+This application provides a real-time clinic queue dashboard that allows staff to:
+
+Check in patients with appointment type and reason
+
+Track live waiting time automatically
+
+Move patients through visit states
+
+Maintain a clear, structured queue flow
+
+✨ Key Features
+
+Real-time patient queue updates
+
+Live waiting time calculation (auto-updated)
+
+Patient lifecycle management:
+Waiting → In Room → Completed
+
+Clean, responsive dashboard UI
+
+Designed for fast-paced clinical environments
+
+🛠 Tech Stack & Architecture Decisions
+
+React.js + Vite – fast development & optimized builds
+
+Tailwind CSS – scalable, utility-first UI styling
+
+Redux Toolkit – predictable and maintainable state management
+
+Node.js + Express.js – REST-based backend architecture
+
+PostgreSQL (Neon) – structured relational data modeling
+
+Day.js – accurate time & timezone handling
+
+The architecture focuses on scalability, maintainability, and real-world business logic rather than simple CRUD operations.
+
+🚀 Getting Started
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+
+Backend setup and database configuration are available in the /backend directory.
+
+📈 What This Project Demonstrates
+
+Real-world problem solving
+
+Clean component and state architecture
+
+Production-oriented mindset
+
+Ability to translate business requirements into software solutions
+
+🔮 Future Enhancements
+
+Role-based access (Admin / Staff)
+
+Wait-time analytics dashboard
+
+Notification or SMS alerts
+
+Multi-clinic support
+
+🔗 Links
+
+Live Demo: [Add link if available]
+
+GitHub Repository: [Your repo link]
