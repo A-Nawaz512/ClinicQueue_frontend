@@ -54,7 +54,17 @@ const PatientCard = ({ patient, onCall, onComplete }) => {
     }
   }, [patient.checked_in_at, isCompleted]);
 
-  const formatWaitTime = (minutes) => `${minutes} min${minutes !== 1 ? "s" : ""}`;
+  const formatWaitTime = (totalMinutes) => {
+    if (totalMinutes < 60) {
+      return `${totalMinutes} min${totalMinutes !== 1 ? "s" : ""}`;
+    }
+
+    const hours = Math.floor(totalMinutes / 60);
+    const minutes = totalMinutes % 60;
+
+    return `${hours}h ${minutes}m`;
+  };
+
 
   return (
     <div className={`bg-white border border-gray-200 rounded-xl shadow-sm p-5 transition-shadow w-full
