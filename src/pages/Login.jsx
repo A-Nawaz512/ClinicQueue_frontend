@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { User, Lock } from "lucide-react";
 import toast from "react-hot-toast";
 
 const Login = () => {
@@ -12,7 +13,7 @@ const Login = () => {
     if (username === "admin" && password === "useradmin") {
       localStorage.setItem("user", username);
       toast.success("Login successful!");
-      navigate("/"); // redirect to dashboard
+      navigate("/");
     } else {
       toast.error("Invalid credentials");
     }
@@ -42,13 +43,16 @@ const Login = () => {
               <label className="block text-gray-700 font-medium mb-1 text-sm md:text-base">
                 Username
               </label>
-              <input
-                type="text"
-                placeholder="admin"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-                className="w-full border border-gray-300 rounded-lg px-3 py-2.5 text-sm md:text-base focus:outline-none focus:ring-2 focus:ring-blue-300"
-              />
+              <div className="relative">
+                <User className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 w-4 h-4" />
+                <input
+                  type="text"
+                  placeholder="admin"
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
+                  className="w-full border border-gray-300 rounded-lg pl-10 pr-3 py-2.5 text-sm md:text-base focus:outline-none focus:ring-2 focus:ring-blue-300 focus:border-transparent transition"
+                />
+              </div>
             </div>
 
             {/* Password */}
@@ -56,13 +60,16 @@ const Login = () => {
               <label className="block text-gray-700 font-medium mb-1 text-sm md:text-base">
                 Password
               </label>
-              <input
-                type="password"
-                placeholder="useradmin"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                className="w-full border border-gray-300 rounded-lg px-3 py-2.5 text-sm md:text-base focus:outline-none focus:ring-2 focus:ring-blue-300"
-              />
+              <div className="relative">
+                <Lock className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 w-4 h-4" />
+                <input
+                  type="password"
+                  placeholder="useradmin"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  className="w-full border border-gray-300 rounded-lg pl-10 pr-3 py-2.5 text-sm md:text-base focus:outline-none focus:ring-2 focus:ring-blue-300 focus:border-transparent transition"
+                />
+              </div>
             </div>
 
             {/* Submit Button */}
@@ -74,6 +81,7 @@ const Login = () => {
                 Login
               </button>
             </div>
+
           </form>
         </div>
       </div>
